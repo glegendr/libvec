@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/01 21:56:45 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/01 23:32:08 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct	s_vec
 	int				private_elem_size;
 	int				private_elem_cap;
 }				t_vec;
-
 
 /*
 ** Copy a memory into an other one
