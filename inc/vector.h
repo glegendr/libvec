@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/05 23:17:22 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/05 23:38:14 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,8 @@ typedef struct	s_vec
 **    vec: the current vector.
 **    first: the first elem to Swap.
 **    second: the second elem to Swap.
-**
-** Return value:
-**    t_vec: the new vector.
 */
-t_vec			v_swap(t_vec *vec, size_t first, size_t second);
+void			v_swap(t_vec *vec, size_t first, size_t second);
 
 /*
 ** Copy a memory into an other one.
