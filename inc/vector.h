@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/05 23:38:14 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/06 00:18:41 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ typedef struct	s_vec
 */
 void			v_swap(t_vec *vec, size_t first, size_t second);
 
+void			v_reverse_rotate(t_vec *vec);
+void			v_rotate(t_vec *vec);
 /*
 ** Copy a memory into an other one.
 **
