@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/01 23:32:08 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/05 23:17:22 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,35 @@ typedef struct	s_vec
 }				t_vec;
 
 /*
-** Copy a memory into an other one
+** Swap 2 params of vec.
 **
 ** Params:
-**    dst: the destination (non malloced)
-**    src: the memory to Copy
-**    n: size of the memory src
+**    vec: the current vector.
+**    first: the first elem to Swap.
+**    second: the second elem to Swap.
+**
+** Return value:
+**    t_vec: the new vector.
+*/
+t_vec			v_swap(t_vec *vec, size_t first, size_t second);
+
+/*
+** Copy a memory into an other one.
+**
+** Params:
+**    dst: the destination (non malloced).
+**    src: the memory to Copy.
+**    n: size of the memory src.
 */
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 
 /*
-** Copy a memory and malloc to the new size
+** Copy a memory and malloc to the new size.
 **
 ** Params:
-**    dst: the memory to Copy
-**    mem_size: the size of memory dst
-**    new_size: the size you want for your new memory (new_size >= mem_size)
+**    dst: the memory to Copy.
+**    mem_size: the size of memory dst.
+**    new_size: the size you want for your new memory (new_size >= mem_size).
 */
 void			*ft_realloc(void *dst, int mem_size, int new_size);
 
@@ -140,11 +153,11 @@ t_vec			v_split(t_vec *vec, int index);
 void			*v_raw(t_vec *vec);
 
 /*
-** Print a vector by using char
+** Print a vector by using char.
 **
 ** Params:
-**    vec: the current vector
-**    fd: the file descriptor
+**    vec: the current vector.
+**    fd: the file descriptor.
 */
 void			v_print(t_vec *vec, int fd);
 #endif

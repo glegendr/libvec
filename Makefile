@@ -19,6 +19,7 @@ SRCNAME= ft_realloc\
 		 v_del\
 		 v_del_last\
 		 v_raw\
+		 v_swap\
 
 OBJDIR=obj/
 CLEANOBJDIR=OBJDIR
