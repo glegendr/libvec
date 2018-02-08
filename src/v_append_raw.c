@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 22:32:59 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/01 20:39:21 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/08 01:40:34 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		v_append_raw(t_vec *vec, void *elem, int nb)
 			(vec->private_elem_nb + vec->private_elem_size * nb))
 	{
 		if ((vec->private_content = ft_realloc(vec->private_content,
-						vec->private_elem_cap,
+						vec->private_elem_cap * vec->private_elem_size,
 						((nb + vec->private_elem_cap)
 						* vec->private_elem_size))) == NULL)
 			return ;
