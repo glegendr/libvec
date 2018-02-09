@@ -8,6 +8,7 @@ CFLAG+= -Wextra
 CFLAG+= -Wall
 SRCNAME= ft_realloc\
 		 ft_memcpy\
+		 v_copy\
 		 v_new\
 		 v_push\
 		 v_push_first\

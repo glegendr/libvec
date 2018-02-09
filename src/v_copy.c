@@ -6,19 +6,19 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 03:20:25 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/09 03:24:42 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/09 03:30:33 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 
-t_vec		*v_copy(t_vec *vec)
+t_vec		v_copy(t_vec *vec)
 {
 	t_vec cpy;
 
 	cpy = v_new(vec->private_elem_size);
-	cpy->private_elem_nb = vec->private_elem_nb;
-	cpy->private_elem_cap = vec->private_elem_cap;
-	ft_memcpy(cpy->private_content, vec->private_content, vec->private_content);
-	return (&cpy);
+	cpy.private_elem_nb = vec->private_elem_nb;
+	cpy.private_elem_cap = vec->private_elem_cap;
+	ft_memcpy(cpy.private_content, vec->private_content, vec->private_elem_cap);
+	return (cpy);
 }
