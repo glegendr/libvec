@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/06 00:18:41 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/09 03:25:35 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define VECTOR_H
 # include <stddef.h>
 # include <stdlib.h>
-# define NB_ELEM_INI 32
+# define NB_ELEM_INI 550
 
 typedef struct	s_vec
 {
@@ -24,6 +24,7 @@ typedef struct	s_vec
 	int				private_elem_cap;
 }				t_vec;
 
+t_vec			*v_copy(t_vec *vec);
 /*
 ** Swap 2 params of vec.
 **
