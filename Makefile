@@ -8,21 +8,31 @@ CFLAG+= -Wextra
 CFLAG+= -Wall
 SRCNAME= ft_realloc\
 		 ft_memcpy\
-		 v_copy\
-		 v_new\
-		 v_push\
-		 v_push_first\
-		 v_print\
+		 st_copy\
+		 st_del\
+		 st_del_last\
+		 st_get\
+		 st_new\
+		 st_print\
+		 st_push\
+		 st_push_first\
+		 st_raw\
 		 v_append_raw\
-		 v_get\
-		 v_size\
-		 v_split\
+		 v_copy\
 		 v_del\
 		 v_del_last\
+		 v_get\
+		 v_new\
+		 v_print\
+		 v_push\
+		 v_push_first\
+		 v_push_int\
 		 v_raw\
+		 v_reverse_rotate\
+		 v_rotate\
+		 v_size\
+		 v_split\
 		 v_swap\
-		v_rotate\
-		v_reverse_rotate\
 
 OBJDIR=obj/
 CLEANOBJDIR=OBJDIR

@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   v_print.c                                          :+:      :+:    :+:   */
+/*   st_del_last.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/21 16:28:18 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/13 19:27:16 by glegendr         ###   ########.fr       */
+/*   Created: 2018/02/13 19:22:20 by glegendr          #+#    #+#             */
+/*   Updated: 2018/02/13 19:51:46 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
-#include <unistd.h>
 
-void		v_print(t_vec *vec, int fd)
+void		st_del_last(t_string *string)
 {
-	write(fd, v_get(vec, 0), vec->private_elem_nb);
+	v_del_last(&string->vec);
 }

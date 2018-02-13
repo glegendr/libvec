@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/09 03:30:49 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/13 19:53:28 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,22 @@ typedef struct	s_vec
 	int				private_elem_size;
 	int				private_elem_cap;
 }				t_vec;
+
+typedef struct	s_string
+{
+	t_vec vec;
+}				t_string;
+
+void			st_append_raw(t_string *string, char *elem, int nb);
+t_string		st_copy(t_string *string);
+void			st_del(t_string *string);
+void			st_del_last(t_string *string);
+char			st_get(t_string *string, int index);
+t_string		st_new(void);
+void			st_print(t_string *string, int fd);
+void			st_push(t_string *string, char elem);
+void			st_push_first(t_string *string, char elem);
+char			*st_raw(t_string *string);
 
 t_vec			v_copy(t_vec *vec);
 /*
@@ -73,7 +89,7 @@ t_vec			v_new(int elem_size);
 **    elem: the element to add at the end of vector.
 */
 void			v_push(t_vec *vec, void *elem);
-
+void			v_push_int(t_vec *vec, int elem);
 /*
 ** Copy a new element at the start of the vector.
 **
