@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/05 21:59:04 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/09 02:40:58 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/02/15 00:15:40 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void		v_swap(t_vec *vec, size_t first, size_t second)
 {
 	int		swap;
-	void *tmp;
+	void	*tmp;
 
 	tmp = malloc(vec->private_elem_size);
 	if (first == second)
