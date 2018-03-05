@@ -12,7 +12,7 @@
 
 #include "vector.h"
 
-char		st_get(t_string *string, int index)
+char		*st_get(t_string *string, int index)
 {
-	return ((char)v_get(&string->vec, index));
+	return ((char *)v_get(&string->vec, index));
 }

@@ -33,7 +33,7 @@ void			st_append_raw(t_string *string, char *elem, int nb);
 t_string		st_copy(t_string *string);
 void			st_del(t_string *string);
 void			st_del_last(t_string *string);
-char			st_get(t_string *string, int index);
+char			*st_get(t_string *string, int index);
 t_string		st_new(void);
 void			st_print(t_string *string, int fd);
 void			st_push(t_string *string, char elem);
@@ -117,6 +117,7 @@ void			v_append_raw(t_vec *vec, void *raw, int nb);
 **    index: the index.
 */
 void			*v_get(t_vec *vec, int index);
+void			*v_pop(t_vec *vec);
 
 /*
 ** Return the element number in the vector.
