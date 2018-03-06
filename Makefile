@@ -23,10 +23,12 @@ SRCNAME= ft_realloc\
 		 v_del_last\
 		 v_get\
 		 v_new\
+		 v_pop\
 		 v_print\
 		 v_push\
 		 v_push_first\
 		 v_push_int\
+		 v_sort_size\
 		 v_raw\
 		 v_reverse_rotate\
 		 v_rotate\
