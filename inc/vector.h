@@ -50,6 +50,7 @@ t_vec			v_copy(t_vec *vec);
 **    second: the second elem to Swap.
 */
 void			v_swap(t_vec *vec, size_t first, size_t second);
+void			v_sort_size(t_vec *vec);
 
 void			v_reverse_rotate(t_vec *vec);
 void			v_rotate(t_vec *vec);
