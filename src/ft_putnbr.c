@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   v_copy.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 03:20:25 by glegendr          #+#    #+#             */
-/*   Updated: 2018/05/29 23:26:43 by glegendr         ###   ########.fr       */
+/*   Created: 2017/11/15 10:13:27 by glegendr          #+#    #+#             */
+/*   Updated: 2018/08/02 23:21:33 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include <unistd.h>
 
-t_vec		v_copy(t_vec *vec)
+void		ft_putchar(char c)
 {
-	t_vec cpy;
+	write(1, &c, 1);
+}
 
-	cpy.private_content = malloc(sizeof(vec->private_elem_size)
-			* vec->private_elem_cap);
-	cpy.private_elem_nb = vec->private_elem_nb;
-	cpy.private_elem_size = vec->private_elem_size;
-	cpy.private_elem_cap = vec->private_elem_cap;
-	ft_memcpy(cpy.private_content, vec->private_content,
-			vec->private_elem_nb * vec->private_elem_size);
-	return (cpy);
+void		ft_putnbr(int n)
+{
+	unsigned int nb;
+
+	nb = n;
+	if (nb > 2147483648 || n < 0)
+	{
+		ft_putchar('-');
+		nb = nb * -1;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }

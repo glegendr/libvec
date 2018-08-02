@@ -22,6 +22,7 @@ SRCNAME= ft_realloc\
 		 v_del\
 		 v_del_last\
 		 v_get\
+		 v_get_size\
 		 v_new\
 		 v_pop\
 		 v_print\
@@ -35,6 +36,7 @@ SRCNAME= ft_realloc\
 		 v_size\
 		 v_split\
 		 v_swap\
+		 ft_putnbr\
 
 OBJDIR=obj/
 CLEANOBJDIR=OBJDIR

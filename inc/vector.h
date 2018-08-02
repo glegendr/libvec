@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/13 19:53:28 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/08/02 23:38:44 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define VECTOR_H
 # include <stddef.h>
 # include <stdlib.h>
-# define NB_ELEM_INI 550
+# define NB_ELEM_INI 32
 
 typedef struct	s_vec
 {
@@ -40,7 +40,23 @@ void			st_push(t_string *string, char elem);
 void			st_push_first(t_string *string, char elem);
 char			*st_raw(t_string *string);
 
+/*
+** Print a number
+**
+** Params:
+**    nb: the current number
+*/
+void			ft_putnbr(int nb);
+void			ft_putchar(char c);
+
+/*
+** Copy a vector into a new vector.
+**
+** Params:
+**    vec: the current vector.
+*/
 t_vec			v_copy(t_vec *vec);
+
 /*
 ** Swap 2 params of vec.
 **
@@ -50,10 +66,16 @@ t_vec			v_copy(t_vec *vec);
 **    second: the second elem to Swap.
 */
 void			v_swap(t_vec *vec, size_t first, size_t second);
-void			v_sort_size(t_vec *vec);
 
+/*
+** Rotate a vector by 1.
+**
+** Params:
+**    vec: the current vector.
+*/
 void			v_reverse_rotate(t_vec *vec);
 void			v_rotate(t_vec *vec);
+
 /*
 ** Copy a memory into an other one.
 **
@@ -91,6 +113,7 @@ t_vec			v_new(int elem_size);
 */
 void			v_push(t_vec *vec, void *elem);
 void			v_push_int(t_vec *vec, int elem);
+
 /*
 ** Copy a new element at the start of the vector.
 **
@@ -118,6 +141,13 @@ void			v_append_raw(t_vec *vec, void *raw, int nb);
 **    index: the index.
 */
 void			*v_get(t_vec *vec, int index);
+
+/*
+** return the last part of the vector and del it from the vector.
+**
+** Params:
+**    vec: the current vector
+*/
 void			*v_pop(t_vec *vec);
 
 /*
@@ -171,11 +201,19 @@ t_vec			v_split(t_vec *vec, int index);
 void			*v_raw(t_vec *vec);
 
 /*
-** Print a vector by using char.
+** Give the size of type
+**
+** Param:
+**   vec: the current vector.
+*/
+int				v_get_size(t_vec *vec);
+
+/*
+** Print a vector
 **
 ** Params:
 **    vec: the current vector.
-**    fd: the file descriptor.
 */
-void			v_print(t_vec *vec, int fd);
+void			v_print(t_vec *vec);
+void			v_sort_size(t_vec *vec);
 #endif
