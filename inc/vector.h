@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/08/02 23:38:44 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/08/02 23:45:21 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void			st_del(t_string *string);
 void			st_del_last(t_string *string);
 char			*st_get(t_string *string, int index);
 t_string		st_new(void);
-void			st_print(t_string *string, int fd);
+void			st_print(t_string *string);
 void			st_push(t_string *string, char elem);
 void			st_push_first(t_string *string, char elem);
 char			*st_raw(t_string *string);

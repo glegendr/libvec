@@ -6,13 +6,13 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 19:26:35 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/13 19:52:03 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/08/02 23:45:04 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 
-void		st_print(t_string *string, int fd)
+void		st_print(t_string *string)
 {
-	v_print(&string->vec, fd);
+	v_print(&string->vec);
 }
