@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2018/08/02 23:45:21 by glegendr         ###   ########.fr       */
+/*   Updated: 2018/08/10 00:35:24 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,12 @@ typedef struct	s_string
 	t_vec vec;
 }				t_string;
 
-void			st_append_raw(t_string *string, char *elem, int nb);
-t_string		st_copy(t_string *string);
-void			st_del(t_string *string);
-void			st_del_last(t_string *string);
-char			*st_get(t_string *string, int index);
-t_string		st_new(void);
-void			st_print(t_string *string);
-void			st_push(t_string *string, char elem);
-void			st_push_first(t_string *string, char elem);
-char			*st_raw(t_string *string);
-
 /*
-** Print a number
+** Print a number / character
 **
 ** Params:
-**    nb: the current number
+**    nb: the current number /
+**    c: the current character
 */
 void			ft_putnbr(int nb);
 void			ft_putchar(char c);
@@ -56,6 +46,7 @@ void			ft_putchar(char c);
 **    vec: the current vector.
 */
 t_vec			v_copy(t_vec *vec);
+t_string		st_copy(t_string *string);
 
 /*
 ** Swap 2 params of vec.
@@ -103,6 +94,7 @@ void			*ft_realloc(void *dst, int mem_size, int new_size);
 **    elem_size: the size of each element of the vector.
 */
 t_vec			v_new(int elem_size);
+t_string		st_new(void);
 
 /*
 ** Copy a new element at the end of the vector.
@@ -113,6 +105,7 @@ t_vec			v_new(int elem_size);
 */
 void			v_push(t_vec *vec, void *elem);
 void			v_push_int(t_vec *vec, int elem);
+void			st_push(t_string *string, char elem);
 
 /*
 ** Copy a new element at the start of the vector.
@@ -122,6 +115,7 @@ void			v_push_int(t_vec *vec, int elem);
 **    elem: the element to add at the end of vector.
 */
 void			v_push_first(t_vec *vec, void *elem);
+void			st_push_first(t_string *string, char elem);
 
 /*
 ** Copy raw at the end of the vector.
@@ -132,6 +126,7 @@ void			v_push_first(t_vec *vec, void *elem);
 **    nb: the numbers of elems content in the raw.
 */
 void			v_append_raw(t_vec *vec, void *raw, int nb);
+void			st_append_raw(t_string *string, char *elem, int nb);
 
 /*
 ** Get the pointer of element pointed by index.
@@ -141,6 +136,7 @@ void			v_append_raw(t_vec *vec, void *raw, int nb);
 **    index: the index.
 */
 void			*v_get(t_vec *vec, int index);
+char			*st_get(t_string *string, int index);
 
 /*
 ** return the last part of the vector and del it from the vector.
@@ -165,6 +161,7 @@ int				v_size(t_vec *vec);
 **    vec: the vector to delete.
 */
 void			v_del(t_vec *vec);
+void			st_del(t_string *string);
 
 /*
 ** Del the last Param.
@@ -173,6 +170,7 @@ void			v_del(t_vec *vec);
 **    vec: the vector to delete.
 */
 void			v_del_last(t_vec *vec);
+void			st_del_last(t_string *string);
 
 /*
 ** Add the second vector at the end of the first.
@@ -199,6 +197,7 @@ t_vec			v_split(t_vec *vec, int index);
 **    vec: the current vector.
 */
 void			*v_raw(t_vec *vec);
+char			*st_raw(t_string *string);
 
 /*
 ** Give the size of type
@@ -215,5 +214,6 @@ int				v_get_size(t_vec *vec);
 **    vec: the current vector.
 */
 void			v_print(t_vec *vec);
+void			st_print(t_string *string);
 void			v_sort_size(t_vec *vec);
 #endif
