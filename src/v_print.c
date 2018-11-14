@@ -19,6 +19,7 @@ void		v_print(t_vec *vec)
 	int i;
 
 	i = 0;
+	ft_putchar('{');
 	if (v_get_size(vec) == sizeof(char))
 		write(1, v_get(vec, 0), vec->private_elem_nb);
 	else if (v_get_size(vec) == sizeof(int))
@@ -34,7 +35,6 @@ void		v_print(t_vec *vec)
 		{
 			v_print(v_get(vec, i));
 			++i;
-			if (i < v_size(vec))
-				ft_putchar('\n');
 		}
+	ft_putchar('}');
 }
