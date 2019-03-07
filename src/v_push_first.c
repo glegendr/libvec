@@ -21,7 +21,7 @@ void		v_push_first(t_vec *vec, void *elem)
 	{
 		if ((vec->private_content = ft_realloc(vec->private_content,
 						vec->private_elem_cap * vec->private_elem_size,
-						(NB_ELEM_INI + vec->private_elem_cap)
+						2 * vec->private_elem_cap
 						* vec->private_elem_size)) == NULL)
 			return ;
 		vec->private_elem_cap += NB_ELEM_INI;
