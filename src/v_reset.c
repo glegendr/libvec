@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   st_del_last.c                                      :+:      :+:    :+:   */
+/*   v_reset.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/13 19:22:20 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/13 19:51:46 by glegendr         ###   ########.fr       */
+/*   Created: 2019/06/08 13:25:07 by glegendr          #+#    #+#             */
+/*   Updated: 2019/06/08 15:30:20 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 
-void		st_del_last(t_string *string)
+void		v_reset(t_vec *vec)
 {
-	v_del_last(&string->vec);
+	vec->private_elem_nb = 0;
 }

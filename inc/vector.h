@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2019/05/28 16:52:24 by glegendr         ###   ########.fr       */
+/*   Updated: 2019/06/17 10:57:50 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,14 @@ t_vec			v_new(int elem_size);
 t_string		st_new(void);
 
 /*
+** Create a new vector but don't malloc it.
+**
+** Param:
+**    elem_size: the size of each element of the vector.
+*/
+t_vec			v_new_null(int elem_size);
+
+/*
 ** Copy a new element at the end of the vector.
 **
 ** Params:
@@ -164,6 +172,14 @@ void			v_del(t_vec *vec);
 void			st_del(t_string *string);
 
 /*
+** Free the vector and all vector in.
+**
+** Param:
+**    vec: the vector to delete.
+*/
+void			v_del_all(t_vec *vec);
+
+/*
 ** Del the last Param.
 **
 ** Param:
@@ -171,6 +187,14 @@ void			st_del(t_string *string);
 */
 void			v_del_last(t_vec *vec);
 void			st_del_last(t_string *string);
+
+/*
+** Reset the current vector.
+**
+** Param:
+**    vec: the vector to reset.
+*/
+void			v_reset(t_vec *vec);
 
 /*
 ** Add the second vector at the end of the first.

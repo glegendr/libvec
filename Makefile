@@ -10,7 +10,6 @@ SRCNAME= ft_realloc\
 	 ft_memcpy\
 	 st_copy\
 	 st_del\
-	 st_del_last\
 	 st_get\
 	 st_new\
 	 st_print\
@@ -31,6 +30,7 @@ SRCNAME= ft_realloc\
 	 v_push_int\
 	 v_sort_size\
 	 v_raw\
+	 v_reset\
 	 v_reverse_rotate\
 	 v_rotate\
 	 v_size\
