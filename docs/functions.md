@@ -1,22 +1,6 @@
-# libvec
-## Documentation
-check [here](https://glegendr.github.io/libvec/#/) for more informations
-## C vector librairy
-### the structure
-you can see the 
-[structure](https://github.com/glegendr/libvec/blob/e8781f5311d5ff3b81022983099180d24405ac83/inc/vector.h#L19)
-here
-```
-typedef struct	s_vec
-{
-  void      *private_content;           // vector's content
-  int       private_elem_nb;            // current number of element
-  int       private_elem_size;          // size of element
-  int       private_elem_cap;           // number of element capacity
-}               t_vec;
-```
-### vectors functions
-#### [v_append_raw](src/v_append_raw.c)
+# All vectors functions
+_you can see the strucure [here](structure.md)_
+## v_append_raw
 Copy raw at the end of the vector.
 
 Params:
@@ -26,11 +10,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_append_raw(t_vec *vec, void *raw, int nb);
 ```
-#### [v_copy](src/v_copy.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_append_raw.c)*
+## v_copy
 Copy a vector into a new vector.
 
 Params:
@@ -39,10 +24,11 @@ Params:
 Return value:
 
 the copy of the current vector `(t_vec)`
-```
+``` c
 t_vec			v_copy(t_vec *vec);
 ```
-#### [v_del](src/v_del.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_copy.c)*
+## v_del
 Free the vector.
 
 Param:
@@ -50,11 +36,12 @@ Param:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_del(t_vec *vec);
 ```
-#### [v_del_all](src/v_del.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_del.c)*
+## v_del_all
 Free the vector and all vector in.
 
 Param:
@@ -62,22 +49,24 @@ Param:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_del_all(t_vec *vec);
 ```
-#### [v_del_last](src/v_del.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_del.c)*
+## v_del_last
 Del the last Param.
 Param:
 - vec: the vector to delete.
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_del_last(t_vec *vec);
 ```
-#### [v_get](src/v_get.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_del_last.c)*
+## v_get
 Get the pointer of element pointed by index.
 
 Params:
@@ -87,10 +76,11 @@ Params:
 Return value:
 
 the pointer of the element pointed by index `(void *)`
-```
+``` c
 void			*v_get(t_vec *vec, int index);
 ```
-#### [v_get_size](src/v_get_size.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_get.c)*
+## v_get_size
 Give the size of type.
 
 Param:
@@ -99,10 +89,11 @@ Param:
 Return value:
 
 the size of the current vector `(int)`
-```
+``` c
 int				v_get_size(t_vec *vec);
 ```
-#### [v_join](src/v_join.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_get_size.c)*
+## v_join
 Add the second vector at the end of the first.
 
 Params:
@@ -111,11 +102,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_join(t_vec *vec1, t_vec *vec2);
 ```
-#### [v_new](src/v_new.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_join.c)*
+## v_new
 Create a new vector.
 
 Param:
@@ -124,10 +116,11 @@ Param:
 Return value:
 
 the new vector `(t_vec)`
-```
+``` c
 t_vec			v_new(int elem_size);
 ```
-#### [v_new_null](src/v_new.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_new.c)*
+## v_new_null
 Create a new vector but don't malloc it.
 
 Param:
@@ -136,10 +129,11 @@ Param:
 Return value:
 
 the new vector `(t_vec)`
-```
+``` c
 t_vec			v_new_null(int elem_size);
 ```
-#### [v_pop](src/v_pop.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_new.c)*
+## v_pop
 return the last part of the vector and del it from the vector.
 
 Params:
@@ -148,10 +142,11 @@ Params:
 Return value:
 
 the pointer of the element deleted from the vector `(void *)`
-```
+``` c
 void			*v_pop(t_vec *vec);
 ```
-#### [v_print](src/v_print.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_pop.c)*
+## v_print
 Print a vector.
 
 Params:
@@ -159,11 +154,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_print(t_vec *vec);
 ```
-#### [v_push](src/v_push.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_print.c)*
+## v_push
 Copy a new element at the end of the vector.
 
 Params:
@@ -172,11 +168,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_push(t_vec *vec, void *elem);
 ```
-#### [v_push_int](src/v_push_int.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_push.c)*
+## v_push_int
 Copy a new element at the end of the vector. -this one is an int-
 
 Params:
@@ -185,11 +182,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_push_int(t_vec *vec, int elem);
 ```
-#### [v_push_first](src/v_push_first.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_push_int.c)*
+## v_push_first
 Copy a new element at the start of the vector.
 
 Params:
@@ -198,11 +196,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_push_first(t_vec *vec, void *elem);
 ```
-#### [v_raw](src/v_raw.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_push_first.c)*
+## v_raw
 Give the raw.
 
 Param:
@@ -211,10 +210,11 @@ Param:
 Return value:
 
 the current data `(void *)`
-```
+``` c
 void			*v_raw(t_vec *vec);
 ```
-#### [v_reset](src/v_reset.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_raw.c)*
+## v_reset
 Reset the current vector.
 
 Param:
@@ -222,11 +222,12 @@ Param:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_reset(t_vec *vec);
 ```
-#### [v_reverse_rotate](src/v_reverse_rotate.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_reset.c)*
+## v_reverse_rotate
 Rotate the vector by 1 right.
 
 Params:
@@ -234,11 +235,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_reverse_rotate(t_vec *vec);
 ```
-#### [v_rotate](src/v_rotate.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_reverse_rotate.c)*
+## v_rotate
 Rotate the vector by 1 left.
 
 Params:
@@ -246,11 +248,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_rotate(t_vec *vec);
 ```
-#### [v_size](src/v_size.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_rotate.c)*
+## v_size
 Return the element number in the vector.
 
 Param:
@@ -259,10 +262,11 @@ Param:
 Return value:
 
 the current size `(int)`
-```
+``` c
 int				v_size(t_vec *vec);
 ```
-#### [v_sort_size](src/v_sort_size.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_size.c)*
+## v_sort_size
 Sort the current all vector in the current vector by size.
 
 Param:
@@ -270,11 +274,12 @@ Param:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_sort_size(t_vec *vec);
 ```
-#### [v_split](src/v_split.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_sort_size.c)*
+## v_split
 Split a vector into two vector at the index.
 
 Pararms:
@@ -284,10 +289,11 @@ Pararms:
 Return value:
 
 a new vector filled by the first part of the given vector `(t_vec)`
-```
+``` c
 t_vec			v_split(t_vec *vec, int index);
 ```
-#### [v_split_raw](src/v_split.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_split.c)*
+## v_split_raw
 Split the vector's data into two data at the index.
 
 Pararms:
@@ -297,11 +303,12 @@ Pararms:
 Return value:
 
 a new data filled by the first part of the given vector `(void *)`
-```
+``` c
 void			*v_split_raw(t_vec *vec, int index);
 ```
-#### [v_swap](src/v_swap.c)
-Swap 2 params of a vector.
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_split.c)*
+## v_swap
+Swap params of a vector.
 
 Params:
 - vec: the current vector.
@@ -310,20 +317,21 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			v_swap(t_vec *vec, size_t first, size_t second);
 ```
-### Utils functions
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_swap.c)*
+# Utils functions
 
 |Function|Used in|
 |-|-|
-|ft_memcpy|[ft_realloc](src/ft_realloc.c)  [v_append_raw](src/v_append_raw.c)  [v_copy](src/v_copy.c)  [v_push](src/v_push.c)  [v_push_int](src/v_push_int.c)  [v_push_first](src/v_push_first.c)  [v_reverse_rotate](src/v_reverse_rotate.c)  [v_rotate](src/v_rotate.c)  [v_split](src/v_split.c)  [v_swap](src/v_swap.c)|
-|ft_realloc|[v_append_raw](src/v_append_raw.c)  [v_push](src/v_push.c)  [v_push_int](src/v_push_int.c)  [v_push_first](src/v_push_first.c)|
-|ft_putchar|[ft_putnbr](src/ft_putnbr.c)  [v_print](src/v_print.c)|
-|ft_putnbr|[v_print](src/v_print.c)|
+|ft_memcpy|[ft_realloc](#ft_realloc)  [v_append_raw](#v_append_raw)  [v_copy](#v_copy)  [v_push](#v_push)  [v_push_int](#v_push_int)  [v_push_first](#v_push_first)  [v_reverse_rotate](#v_reverse_rotate)  [v_rotate](#v_rotate)  [v_split](#v_split)  [v_swap](#v_swap)|
+|ft_realloc|[v_append_raw](#v_append_raw)  [v_push](#v_push)  [v_push_int](#v_push_int)  [v_push_first](#v_push_first)|
+|ft_putchar|[ft_putnbr](#ft_putnbr)  [v_print](#v_print)|
+|ft_putnbr|[v_print](#v_print)|
 
-#### [ft_memcpy](src/ft_memcpy.c)
+## ft_memcpy
 Copy a memory into an other one.
 
 Params:
@@ -334,10 +342,11 @@ Params:
 Return value:
 
 an other pointer of the destination `(void *)`
-```
+``` c
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 ```
-#### [ft_realloc](src/ft_realloc.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_memcpy.c)*
+## ft_realloc
 Copy a memory and malloc to the new size.
 
 Params:
@@ -348,10 +357,11 @@ Params:
 Return value:
 
 an other pointer of the destination `(void *)`
-```
+``` c
 void			*ft_realloc(void *dst, int mem_size, int new_size);
 ```
-#### [ft_putchar](src/ft_putchar.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_realloc.c)*
+## ft_putchar
 Print a character.
 
 Params:
@@ -359,11 +369,12 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			ft_putchar(char c);
 ```
-#### [ft_putnbr](src/ft_putnbr.c)
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_putchar.c)*
+## ft_putnbr
 Print a number.
 
 Params:
@@ -371,7 +382,8 @@ Params:
 
 Return value:
 
-void.
-```
+`void`
+``` c
 void			ft_putnbr(int nb);
 ```
+*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_putnbr.c)*
