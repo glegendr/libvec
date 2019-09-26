@@ -3,7 +3,7 @@
 _you can see the code of the 
 [structure](https://github.com/glegendr/libvec/blob/e8781f5311d5ff3b81022983099180d24405ac83/inc/vector.h#L19)
 here_
-```
+``` c
 typedef struct	s_vec
 {
   void      *private_content;

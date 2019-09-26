@@ -80,6 +80,11 @@ the pointer of the element pointed by index `(void *)`
 void			*v_get(t_vec *vec, int index);
 ```
 *check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_get.c)*
+
+> If your vector are fulled with `int` you have to cast the return like 
+```c
+int i = *(int *)v_get(&vec, 16);
+```
 ## v_get_size
 Give the size of type.
 
@@ -93,20 +98,6 @@ the size of the current vector `(int)`
 int				v_get_size(t_vec *vec);
 ```
 *check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_get_size.c)*
-## v_join
-Add the second vector at the end of the first.
-
-Params:
-- vec1: first vector.
-- vec2: second vector.
-
-Return value:
-
-`void`
-``` c
-void			v_join(t_vec *vec1, t_vec *vec2);
-```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_join.c)*
 ## v_new
 Create a new vector.
 
@@ -146,6 +137,8 @@ the pointer of the element deleted from the vector `(void *)`
 void			*v_pop(t_vec *vec);
 ```
 *check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_pop.c)*
+
+!> If you use `v_pop` on a vector fulled with pointers, you have to memcpy the return because if you push after, the memory with be crushed.
 ## v_print
 Print a vector.
 
@@ -159,6 +152,8 @@ Return value:
 void			v_print(t_vec *vec);
 ```
 *check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_print.c)*
+
+!> Only works with `int`, `char` and `t_vec`
 ## v_push
 Copy a new element at the end of the vector.
 

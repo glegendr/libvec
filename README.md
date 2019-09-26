@@ -102,19 +102,6 @@ the size of the current vector `(int)`
 ```
 int				v_get_size(t_vec *vec);
 ```
-#### [v_join](src/v_join.c)
-Add the second vector at the end of the first.
-
-Params:
-- vec1: first vector.
-- vec2: second vector.
-
-Return value:
-
-void.
-```
-void			v_join(t_vec *vec1, t_vec *vec2);
-```
 #### [v_new](src/v_new.c)
 Create a new vector.
 

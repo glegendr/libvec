@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2019/09/24 20:12:03 by glegendr         ###   ########.fr       */
+/*   Updated: 2019/09/26 13:42:41 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,15 +86,6 @@ void			*v_get(t_vec *vec, int index);
 **   vec: the current vector.
 */
 int				v_get_size(t_vec *vec);
-
-/*
-** Add the second vector at the end of the first.
-**
-** Params:
-**    vec1: first vector.
-**    vec2: second vector.
-*/
-void			v_join(t_vec *vec1, t_vec *vec2);
 
 /*
 ** Create a new vector.
