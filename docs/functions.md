@@ -1,5 +1,4 @@
 # All vectors functions
-_you can see the strucure [here](structure.md)_
 ## v_append_raw
 Copy raw at the end of the vector.
 
@@ -14,7 +13,7 @@ Return value:
 ``` c
 void			v_append_raw(t_vec *vec, void *raw, int nb);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_append_raw.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_append_raw.c)*
 ## v_copy
 Copy a vector into a new vector.
 
@@ -27,7 +26,7 @@ the copy of the current vector `(t_vec)`
 ``` c
 t_vec			v_copy(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_copy.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_copy.c)*
 ## v_del
 Free the vector.
 
@@ -40,9 +39,11 @@ Return value:
 ``` c
 void			v_del(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_del.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_del.c)*
+
+!> If your vector is filled with pointers, the content will not be free
 ## v_del_all
-Free the vector and all vector in.
+Free the vector and all sub-vector in.
 
 Param:
 - vec: the vector to delete.
@@ -53,9 +54,9 @@ Return value:
 ``` c
 void			v_del_all(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_del.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_del.c)*
 ## v_del_last
-Del the last Param.
+Del the last element.
 Param:
 - vec: the vector to delete.
 
@@ -65,7 +66,7 @@ Return value:
 ``` c
 void			v_del_last(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_del_last.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_del_last.c)*
 ## v_get
 Get the pointer of element pointed by index.
 
@@ -79,9 +80,9 @@ the pointer of the element pointed by index `(void *)`
 ``` c
 void			*v_get(t_vec *vec, int index);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_get.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_get.c)*
 
-> If your vector are fulled with `int` you have to cast the return like 
+> If your vector is fulfilled with `int` you have to cast the return like 
 ```c
 int i = *(int *)v_get(&vec, 16);
 ```
@@ -97,7 +98,7 @@ the size of the current vector `(int)`
 ``` c
 int				v_get_size(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_get_size.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_get_size.c)*
 ## v_new
 Create a new vector.
 
@@ -110,7 +111,7 @@ the new vector `(t_vec)`
 ``` c
 t_vec			v_new(int elem_size);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_new.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_new.c)*
 ## v_new_null
 Create a new vector but don't malloc it.
 
@@ -123,7 +124,7 @@ the new vector `(t_vec)`
 ``` c
 t_vec			v_new_null(int elem_size);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_new.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_new.c)*
 ## v_pop
 return the last part of the vector and del it from the vector.
 
@@ -136,7 +137,7 @@ the pointer of the element deleted from the vector `(void *)`
 ``` c
 void			*v_pop(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_pop.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_pop.c)*
 
 !> If you use `v_pop` on a vector fulled with pointers, you have to memcpy the return because if you push after, the memory with be crushed.
 ## v_print
@@ -151,7 +152,7 @@ Return value:
 ``` c
 void			v_print(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_print.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_print.c)*
 
 !> Only works with `int`, `char` and `t_vec`
 ## v_push
@@ -167,7 +168,7 @@ Return value:
 ``` c
 void			v_push(t_vec *vec, void *elem);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_push.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_push.c)*
 ## v_push_int
 Copy a new element at the end of the vector. -this one is an int-
 
@@ -181,7 +182,7 @@ Return value:
 ``` c
 void			v_push_int(t_vec *vec, int elem);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_push_int.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_push_int.c)*
 ## v_push_first
 Copy a new element at the start of the vector.
 
@@ -195,7 +196,7 @@ Return value:
 ``` c
 void			v_push_first(t_vec *vec, void *elem);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_push_first.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_push_first.c)*
 ## v_raw
 Give the raw.
 
@@ -208,7 +209,7 @@ the current data `(void *)`
 ``` c
 void			*v_raw(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_raw.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_raw.c)*
 ## v_reset
 Reset the current vector.
 
@@ -221,7 +222,7 @@ Return value:
 ``` c
 void			v_reset(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_reset.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_reset.c)*
 ## v_reverse_rotate
 Rotate the vector by 1 right.
 
@@ -234,7 +235,7 @@ Return value:
 ``` c
 void			v_reverse_rotate(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_reverse_rotate.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_reverse_rotate.c)*
 ## v_rotate
 Rotate the vector by 1 left.
 
@@ -247,9 +248,9 @@ Return value:
 ``` c
 void			v_rotate(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_rotate.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_rotate.c)*
 ## v_size
-Return the element number in the vector.
+Return the number of elements in the vector.
 
 Param:
 - vec: the current vector.
@@ -260,7 +261,7 @@ the current size `(int)`
 ``` c
 int				v_size(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_size.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_size.c)*
 ## v_sort_size
 Sort the current all vector in the current vector by size.
 
@@ -273,7 +274,7 @@ Return value:
 ``` c
 void			v_sort_size(t_vec *vec);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_sort_size.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_sort_size.c)*
 ## v_split
 Split a vector into two vector at the index.
 
@@ -287,7 +288,7 @@ a new vector filled by the first part of the given vector `(t_vec)`
 ``` c
 t_vec			v_split(t_vec *vec, int index);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_split.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_split.c)*
 ## v_split_raw
 Split the vector's data into two data at the index.
 
@@ -301,9 +302,9 @@ a new data filled by the first part of the given vector `(void *)`
 ``` c
 void			*v_split_raw(t_vec *vec, int index);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_split.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_split.c)*
 ## v_swap
-Swap params of a vector.
+Swap two elements of a vector.
 
 Params:
 - vec: the current vector.
@@ -316,7 +317,7 @@ Return value:
 ``` c
 void			v_swap(t_vec *vec, size_t first, size_t second);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/v_swap.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_swap.c)*
 # Utils functions
 
 |Function|Used in|
@@ -340,7 +341,7 @@ an other pointer of the destination `(void *)`
 ``` c
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_memcpy.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_memcpy.c)*
 ## ft_realloc
 Copy a memory and malloc to the new size.
 
@@ -355,7 +356,7 @@ an other pointer of the destination `(void *)`
 ``` c
 void			*ft_realloc(void *dst, int mem_size, int new_size);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_realloc.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_realloc.c)*
 ## ft_putchar
 Print a character.
 
@@ -368,7 +369,7 @@ Return value:
 ``` c
 void			ft_putchar(char c);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_putchar.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_putchar.c)*
 ## ft_putnbr
 Print a number.
 
@@ -381,4 +382,4 @@ Return value:
 ``` c
 void			ft_putnbr(int nb);
 ```
-*check raw [here](https://github.com/glegendr/libvec/blob/master/src/ft_putnbr.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_putnbr.c)*
