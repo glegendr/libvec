@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 22:32:59 by glegendr          #+#    #+#             */
-/*   Updated: 2019/06/08 13:49:40 by glegendr         ###   ########.fr       */
+/*   Updated: 2019/11/19 16:14:41 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		v_append_raw(t_vec *vec, void *elem, int nb)
 	if (vec->private_elem_cap <=
 			(vec->private_elem_nb + vec->private_elem_size * nb))
 	{
-		if ((vec->private_content = ft_realloc(vec->private_content,
+		if ((vec->private_content = v_realloc(vec->private_content,
 			vec->private_elem_cap * vec->private_elem_size,
 			nb + vec->private_elem_cap > 2 * vec->private_elem_cap ?
 				((nb + vec->private_elem_cap)
@@ -31,7 +31,7 @@ void		v_append_raw(t_vec *vec, void *elem, int nb)
 		else
 			vec->private_elem_cap *= 2;
 	}
-	ft_memcpy(v_get(vec, vec->private_elem_nb),
+	v_memcpy(v_get(vec, vec->private_elem_nb),
 			elem, vec->private_elem_size * nb);
 	vec->private_elem_nb += nb;
 }

@@ -6,8 +6,8 @@ CFLAG=
 CFLAG+= -Werror
 CFLAG+= -Wextra
 CFLAG+= -Wall
-SRCNAME= ft_realloc\
-	 ft_memcpy\
+SRCNAME= v_realloc\
+	 v_memcpy\
 	 v_append_raw\
 	 v_copy\
 	 v_del\
@@ -28,7 +28,7 @@ SRCNAME= ft_realloc\
 	 v_size\
 	 v_split\
 	 v_swap\
-	 ft_putnbr\
+	 v_putnbr\
 
 OBJDIR=obj/
 CLEANOBJDIR=OBJDIR

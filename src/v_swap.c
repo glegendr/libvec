@@ -26,8 +26,8 @@ void		v_swap(t_vec *vec, size_t first, size_t second)
 		first = swap;
 	}
 	tmp = malloc(vec->private_elem_size);
-	ft_memcpy(tmp, v_get(vec, first), vec->private_elem_size);
-	ft_memcpy(v_get(vec, first), v_get(vec, second), vec->private_elem_size);
-	ft_memcpy(v_get(vec, second), tmp, vec->private_elem_size);
+	v_memcpy(tmp, v_get(vec, first), vec->private_elem_size);
+	v_memcpy(v_get(vec, first), v_get(vec, second), vec->private_elem_size);
+	v_memcpy(v_get(vec, second), tmp, vec->private_elem_size);
 	free(tmp);
 }

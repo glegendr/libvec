@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   v_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 20:54:36 by glegendr          #+#    #+#             */
-/*   Updated: 2018/02/01 20:38:31 by glegendr         ###   ########.fr       */
+/*   Created: 2017/11/15 10:13:27 by glegendr          #+#    #+#             */
+/*   Updated: 2019/06/08 13:44:55 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include <unistd.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void		v_putchar(char c)
 {
-	size_t i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (i < n)
+void		v_putnbr(int n)
+{
+	unsigned int nb;
+
+	nb = n;
+	if (nb > 2147483648 || n < 0)
 	{
-		((char*)dst)[i] = ((char *)src)[i];
-		++i;
+		v_putchar('-');
+		nb = nb * -1;
 	}
-	return (dst);
+	if (nb >= 10)
+	{
+		v_putnbr(nb / 10);
+		v_putnbr(nb % 10);
+	}
+	else
+		v_putchar(nb + '0');
 }

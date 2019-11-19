@@ -19,14 +19,14 @@ void	v_reverse_rotate(t_vec *vec)
 
 	tmp = malloc(vec->private_elem_size);
 	tmp2 = malloc((vec->private_elem_nb - 1) * vec->private_elem_size);
-	ft_memcpy(tmp, v_get(vec, v_size(vec) - 1), vec->private_elem_size);
-	ft_memcpy(tmp2, v_get(vec, 0), (vec->private_elem_nb - 1)
+	v_memcpy(tmp, v_get(vec, v_size(vec) - 1), vec->private_elem_size);
+	v_memcpy(tmp2, v_get(vec, 0), (vec->private_elem_nb - 1)
 			* vec->private_elem_size);
 	free(vec->private_content);
 	vec->private_content = malloc(vec->private_elem_cap *
 			vec->private_elem_size);
-	ft_memcpy(v_get(vec, 0), tmp, vec->private_elem_size);
-	ft_memcpy(v_get(vec, 1), tmp2, (vec->private_elem_nb - 1)
+	v_memcpy(v_get(vec, 0), tmp, vec->private_elem_size);
+	v_memcpy(v_get(vec, 1), tmp2, (vec->private_elem_nb - 1)
 			* vec->private_elem_size);
 	free(tmp);
 	free(tmp2);

@@ -322,12 +322,12 @@ void			v_swap(t_vec *vec, size_t first, size_t second);
 
 |Function|Used in|
 |-|-|
-|ft_memcpy|[ft_realloc](#ft_realloc)  [v_append_raw](#v_append_raw)  [v_copy](#v_copy)  [v_push](#v_push)  [v_push_int](#v_push_int)  [v_push_first](#v_push_first)  [v_reverse_rotate](#v_reverse_rotate)  [v_rotate](#v_rotate)  [v_split](#v_split)  [v_swap](#v_swap)|
-|ft_realloc|[v_append_raw](#v_append_raw)  [v_push](#v_push)  [v_push_int](#v_push_int)  [v_push_first](#v_push_first)|
-|ft_putchar|[ft_putnbr](#ft_putnbr)  [v_print](#v_print)|
-|ft_putnbr|[v_print](#v_print)|
+|v_memcpy|[v_realloc](#v_realloc)  [v_append_raw](#v_append_raw)  [v_copy](#v_copy)  [v_push](#v_push)  [v_push_int](#v_push_int)  [v_push_first](#v_push_first)  [v_reverse_rotate](#v_reverse_rotate)  [v_rotate](#v_rotate)  [v_split](#v_split)  [v_swap](#v_swap)|
+|v_realloc|[v_append_raw](#v_append_raw)  [v_push](#v_push)  [v_push_int](#v_push_int)  [v_push_first](#v_push_first)|
+|v_putchar|[v_putnbr](#v_putnbr)  [v_print](#v_print)|
+|v_putnbr|[v_print](#v_print)|
 
-## ft_memcpy
+## v_memcpy
 Copy a memory into an other one.
 
 Params:
@@ -339,10 +339,10 @@ Return value:
 
 an other pointer of the destination `(void *)`
 ``` c
-void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*v_memcpy(void *dst, const void *src, size_t n);
 ```
-*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_memcpy.c)*
-## ft_realloc
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_memcpy.c)*
+## v_realloc
 Copy a memory and malloc to the new size.
 
 Params:
@@ -354,10 +354,10 @@ Return value:
 
 an other pointer of the destination `(void *)`
 ``` c
-void			*ft_realloc(void *dst, int mem_size, int new_size);
+void			*v_realloc(void *dst, int mem_size, int new_size);
 ```
-*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_realloc.c)*
-## ft_putchar
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_realloc.c)*
+## v_putchar
 Print a character.
 
 Params:
@@ -367,10 +367,10 @@ Return value:
 
 `void`
 ``` c
-void			ft_putchar(char c);
+void			v_putchar(char c);
 ```
-*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_putchar.c)*
-## ft_putnbr
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_putchar.c)*
+## v_putnbr
 Print a number.
 
 Params:
@@ -380,6 +380,6 @@ Return value:
 
 `void`
 ``` c
-void			ft_putnbr(int nb);
+void			v_putnbr(int nb);
 ```
-*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/ft_putnbr.c)*
+*see implementation [here](https://github.com/glegendr/libvec/blob/master/src/v_putnbr.c)*

@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2019/09/26 13:42:41 by glegendr         ###   ########.fr       */
+/*   Updated: 2019/11/19 16:18:33 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,7 +211,7 @@ void			v_swap(t_vec *vec, size_t first, size_t second);
 **    src: the memory to Copy.
 **    n: size of the memory src.
 */
-void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*v_memcpy(void *dst, const void *src, size_t n);
 
 /*
 ** Copy a memory and malloc to the new size.
@@ -221,7 +221,7 @@ void			*ft_memcpy(void *dst, const void *src, size_t n);
 **    mem_size: the size of memory dst.
 **    new_size: the size you want for your new memory (new_size >= mem_size).
 */
-void			*ft_realloc(void *dst, int mem_size, int new_size);
+void			*v_realloc(void *dst, int mem_size, int new_size);
 
 /*
 ** Print a number / character.
@@ -230,7 +230,7 @@ void			*ft_realloc(void *dst, int mem_size, int new_size);
 **    nb: the current number.
 **    c: the current character.
 */
-void			ft_putnbr(int nb);
-void			ft_putchar(char c);
+void			v_putnbr(int nb);
+void			v_putchar(char c);
 
 #endif

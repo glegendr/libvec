@@ -305,12 +305,12 @@ void			v_swap(t_vec *vec, size_t first, size_t second);
 
 |Function|Used in|
 |-|-|
-|ft_memcpy|[ft_realloc](src/ft_realloc.c)  [v_append_raw](src/v_append_raw.c)  [v_copy](src/v_copy.c)  [v_push](src/v_push.c)  [v_push_int](src/v_push_int.c)  [v_push_first](src/v_push_first.c)  [v_reverse_rotate](src/v_reverse_rotate.c)  [v_rotate](src/v_rotate.c)  [v_split](src/v_split.c)  [v_swap](src/v_swap.c)|
-|ft_realloc|[v_append_raw](src/v_append_raw.c)  [v_push](src/v_push.c)  [v_push_int](src/v_push_int.c)  [v_push_first](src/v_push_first.c)|
-|ft_putchar|[ft_putnbr](src/ft_putnbr.c)  [v_print](src/v_print.c)|
-|ft_putnbr|[v_print](src/v_print.c)|
+|v_memcpy|[v_realloc](src/v_realloc.c)  [v_append_raw](src/v_append_raw.c)  [v_copy](src/v_copy.c)  [v_push](src/v_push.c)  [v_push_int](src/v_push_int.c)  [v_push_first](src/v_push_first.c)  [v_reverse_rotate](src/v_reverse_rotate.c)  [v_rotate](src/v_rotate.c)  [v_split](src/v_split.c)  [v_swap](src/v_swap.c)|
+|v_realloc|[v_append_raw](src/v_append_raw.c)  [v_push](src/v_push.c)  [v_push_int](src/v_push_int.c)  [v_push_first](src/v_push_first.c)|
+|v_putchar|[v_putnbr](src/v_putnbr.c)  [v_print](src/v_print.c)|
+|v_putnbr|[v_print](src/v_print.c)|
 
-#### [ft_memcpy](src/ft_memcpy.c)
+#### [v_memcpy](src/v_memcpy.c)
 Copy a memory into an other one.
 
 Params:
@@ -322,9 +322,9 @@ Return value:
 
 an other pointer of the destination `(void *)`
 ```
-void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*v_memcpy(void *dst, const void *src, size_t n);
 ```
-#### [ft_realloc](src/ft_realloc.c)
+#### [v_realloc](src/v_realloc.c)
 Copy a memory and malloc to the new size.
 
 Params:
@@ -336,9 +336,9 @@ Return value:
 
 an other pointer of the destination `(void *)`
 ```
-void			*ft_realloc(void *dst, int mem_size, int new_size);
+void			*v_realloc(void *dst, int mem_size, int new_size);
 ```
-#### [ft_putchar](src/ft_putchar.c)
+#### [v_putchar](src/v_putchar.c)
 Print a character.
 
 Params:
@@ -348,9 +348,9 @@ Return value:
 
 void.
 ```
-void			ft_putchar(char c);
+void			v_putchar(char c);
 ```
-#### [ft_putnbr](src/ft_putnbr.c)
+#### [v_putnbr](src/v_putnbr.c)
 Print a number.
 
 Params:
@@ -360,5 +360,5 @@ Return value:
 
 void.
 ```
-void			ft_putnbr(int nb);
+void			v_putnbr(int nb);
 ```

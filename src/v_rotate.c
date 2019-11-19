@@ -19,9 +19,9 @@ void		v_rotate(t_vec *vec)
 
 	tmp2 = v_raw(vec) + vec->private_elem_size;
 	tmp = malloc(vec->private_elem_size);
-	ft_memcpy(tmp, v_get(vec, 0), vec->private_elem_size);
-	ft_memcpy(v_raw(vec), tmp2, (vec->private_elem_nb - 1)
+	v_memcpy(tmp, v_get(vec, 0), vec->private_elem_size);
+	v_memcpy(v_raw(vec), tmp2, (vec->private_elem_nb - 1)
 			* vec->private_elem_size);
-	ft_memcpy(v_get(vec, v_size(vec) - 1), tmp, vec->private_elem_size);
+	v_memcpy(v_get(vec, v_size(vec) - 1), tmp, vec->private_elem_size);
 	free(tmp);
 }
