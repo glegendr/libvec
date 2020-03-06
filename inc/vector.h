@@ -6,7 +6,7 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:26:53 by glegendr          #+#    #+#             */
-/*   Updated: 2019/11/19 16:18:33 by glegendr         ###   ########.fr       */
+/*   Updated: 2020/02/03 13:35:36 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,7 @@ void			v_print(t_vec *vec);
 **    elem: the element to add at the end of vector.
 */
 void			v_push(t_vec *vec, void *elem);
+void			v_push_bin(t_vec *vec, int elem);
 void			v_push_int(t_vec *vec, int elem);
 
 /*
@@ -137,6 +138,7 @@ void			v_push_int(t_vec *vec, int elem);
 **    elem: the element to add at the end of vector.
 */
 void			v_push_first(t_vec *vec, void *elem);
+void			v_push_first_int(t_vec *vec, int elem);
 
 /*
 ** Give the raw.
@@ -232,5 +234,13 @@ void			*v_realloc(void *dst, int mem_size, int new_size);
 */
 void			v_putnbr(int nb);
 void			v_putchar(char c);
+
+void			v_Lsh(t_vec *vec, int nb);
+uint64_t		v_get_bin_nb(t_vec *vec);
+void			v_print_bin(t_vec *vec);
+t_vec			v_mult(t_vec *vec, t_vec *mult);
+t_vec			v_pow(t_vec *vec, int pow);
+void			v_add(t_vec *vec, t_vec *add);
+t_vec			u64_to_bin(uint64_t nb);
 
 #endif

@@ -18,7 +18,9 @@ SRCNAME= v_realloc\
 	 v_pop\
 	 v_print\
 	 v_push\
+	 v_push_bin\
 	 v_push_first\
+	 v_push_first_int\
 	 v_push_int\
 	 v_sort_size\
 	 v_raw\

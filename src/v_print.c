@@ -6,12 +6,13 @@
 /*   By: glegendr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/21 16:28:18 by glegendr          #+#    #+#             */
-/*   Updated: 2019/11/28 19:29:51 by glegendr         ###   ########.fr       */
+/*   Updated: 2020/02/03 10:16:52 by glegendr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 #include <unistd.h>
+#include <stdio.h>
 
 void		v_print(t_vec *vec)
 {
